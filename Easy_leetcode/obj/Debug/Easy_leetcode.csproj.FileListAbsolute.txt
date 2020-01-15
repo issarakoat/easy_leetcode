@@ -1,0 +1,9 @@
+C:\Users\weera\Dropbox\Easy_leetcode\Easy_leetcode\bin\Debug\Easy_leetcode.exe.config
+C:\Users\weera\Dropbox\Easy_leetcode\Easy_leetcode\bin\Debug\Easy_leetcode.exe
+C:\Users\weera\Dropbox\Easy_leetcode\Easy_leetcode\bin\Debug\Easy_leetcode.pdb
+C:\Users\weera\Dropbox\Easy_leetcode\Easy_leetcode\obj\Debug\Easy_leetcode.csprojAssemblyReference.cache
+C:\Users\weera\Dropbox\Easy_leetcode\Easy_leetcode\obj\Debug\Easy_leetcode.exe
+C:\Users\weera\Dropbox\Easy_leetcode\Easy_leetcode\obj\Debug\Easy_leetcode.pdb
+C:\Users\weera\Dropbox\Easy_leetcode\Easy_leetcode\bin\Debug\Leetcode.dll
+C:\Users\weera\Dropbox\Easy_leetcode\Easy_leetcode\bin\Debug\Leetcode.pdb
+C:\Users\weera\Dropbox\Easy_leetcode\Easy_leetcode\obj\Debug\Easy_leetcode.csproj.CopyComplete

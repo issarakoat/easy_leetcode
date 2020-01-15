@@ -1,0 +1,8 @@
+C:\Users\weera\Dropbox\Easy_leetcode\Leetcode\bin\Debug\netstandard2.0\Leetcode.deps.json
+C:\Users\weera\Dropbox\Easy_leetcode\Leetcode\bin\Debug\netstandard2.0\Leetcode.dll
+C:\Users\weera\Dropbox\Easy_leetcode\Leetcode\bin\Debug\netstandard2.0\Leetcode.pdb
+C:\Users\weera\Dropbox\Easy_leetcode\Leetcode\obj\Debug\netstandard2.0\Leetcode.csprojAssemblyReference.cache
+C:\Users\weera\Dropbox\Easy_leetcode\Leetcode\obj\Debug\netstandard2.0\Leetcode.AssemblyInfoInputs.cache
+C:\Users\weera\Dropbox\Easy_leetcode\Leetcode\obj\Debug\netstandard2.0\Leetcode.AssemblyInfo.cs
+C:\Users\weera\Dropbox\Easy_leetcode\Leetcode\obj\Debug\netstandard2.0\Leetcode.dll
+C:\Users\weera\Dropbox\Easy_leetcode\Leetcode\obj\Debug\netstandard2.0\Leetcode.pdb

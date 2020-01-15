@@ -1,0 +1,8 @@
+C:\Users\weera\Dropbox\Easy_leetcode\Yo\bin\Debug\netstandard2.0\Yo.deps.json
+C:\Users\weera\Dropbox\Easy_leetcode\Yo\bin\Debug\netstandard2.0\Yo.dll
+C:\Users\weera\Dropbox\Easy_leetcode\Yo\bin\Debug\netstandard2.0\Yo.pdb
+C:\Users\weera\Dropbox\Easy_leetcode\Yo\obj\Debug\netstandard2.0\Yo.csprojAssemblyReference.cache
+C:\Users\weera\Dropbox\Easy_leetcode\Yo\obj\Debug\netstandard2.0\Yo.AssemblyInfoInputs.cache
+C:\Users\weera\Dropbox\Easy_leetcode\Yo\obj\Debug\netstandard2.0\Yo.AssemblyInfo.cs
+C:\Users\weera\Dropbox\Easy_leetcode\Yo\obj\Debug\netstandard2.0\Yo.dll
+C:\Users\weera\Dropbox\Easy_leetcode\Yo\obj\Debug\netstandard2.0\Yo.pdb
