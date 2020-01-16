@@ -12,9 +12,12 @@ namespace Easy_leetcode
         static void Main(string[] args)
         {
             LeetcodeClass LC = new LeetcodeClass();
-            LC.ReadBinaryWatch_401(1);
-           //Console.WriteLine(  LC.HapppyNumber_202(7));
-           Console.WriteLine(  LC.StrStr_28("mississippi", "issip"));
+          //  LC.ReadBinaryWatch_401(1);
+            //Console.WriteLine(  LC.HapppyNumber_202(7));
+            //Console.WriteLine(  LC.StrStr_28("mississippi", "issip"));
+            double[] predicted = { 4, 25, 0.75, 11 };
+            double[] observed = { 3, 21, -1.25, 13 };
+            Console.WriteLine(LC.RootMeanSquarError(predicted, observed));
             Console.ReadLine();
         }
     }

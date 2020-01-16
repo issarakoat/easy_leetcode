@@ -96,5 +96,22 @@ namespace Leetcode
             index = haystack.IndexOf(needle);
             return index;
         }
+        public double RootMeanSquarError(double[] predited, double[] observed)
+        {
+            double me_p = 0.0;
+            double me_o = 0.0;
+            int N = 0;
+            foreach (var p in predited)
+            {
+                me_p += p;
+                N++;
+            }
+            foreach (var o in observed)
+            {
+                me_o += o;
+            }
+            double res = Math.Sqrt((me_p - me_o) * (me_p - me_o)/N);
+            return res;
+        }
     } 
 }
