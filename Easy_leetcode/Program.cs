@@ -13,7 +13,8 @@ namespace Easy_leetcode
         {
             LeetcodeClass LC = new LeetcodeClass();
             LC.ReadBinaryWatch_401(1);
-           Console.WriteLine(  LC.HapppyNumber_202(7));
+           //Console.WriteLine(  LC.HapppyNumber_202(7));
+           Console.WriteLine(  LC.StrStr_28("mississippi", "issip"));
             Console.ReadLine();
         }
     }

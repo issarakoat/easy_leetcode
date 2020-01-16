@@ -90,5 +90,11 @@ namespace Leetcode
             }
             return count;
         }
+        public int StrStr_28(string haystack, string needle)
+        {
+            int index = -1;
+            index = haystack.IndexOf(needle);
+            return index;
+        }
     } 
 }
