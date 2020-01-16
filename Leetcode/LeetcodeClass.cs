@@ -123,5 +123,31 @@ namespace Leetcode
             }
             return index;
         }
+        public int MaxSubArray(int[] nums)
+        {
+            if (nums.Length == 1) return nums[0];
+            int max_sum = int.MinValue;
+            for (int i = nums.Length - 2; i >= 0; i--)
+            {
+                int current_max = Math.Max(nums[i], nums[i] + nums[i + 1]);
+                nums[i] = current_max;
+            }
+            for (int i = 0; i < nums.Length; i++)
+            {
+                max_sum = Math.Max(nums[i], max_sum);
+            }
+            return max_sum;
+        }
+        public int MaxProfit_121(int[] prices)
+        {
+            int min = int.MaxValue;
+            int res = 0;
+            for (int i = 0; i < prices.Length; i++)
+            {
+                if (prices[i] < min) min = prices[i];
+                else res = Math.Max(res, prices[i] - min);
+            }
+            return res;
+        }
     } 
 }
