@@ -195,5 +195,53 @@ namespace Leetcode
             }
             return digits;
         }
+        public string AddBinary_67(string a, string b)
+        {
+            int len = a.Length;
+            string res = "";
+            char[] A = a.ToCharArray();
+            Array.Reverse(A);
+            char[] B = b.ToCharArray();
+            Array.Reverse(B);
+            if (A.Length != B.Length)
+            {
+                len = Math.Max(A.Length, B.Length);
+            }
+            int carry = 0;
+            for (int i = 0; i < len; i++)
+            {
+                int x = 0;
+                int y = 0;
+                if(i < A.Length)
+                {
+                    if (A[i] == '1') x = 1;
+                }
+                if(i < B.Length)
+                {
+                    if (B[i] == '1' ) y = 1;
+                }
+                             
+                int sum = x + y + carry;
+                carry = 0;
+                if (sum <= 1) res += sum.ToString();
+                if(sum == 2)
+                {
+                    res += "0";
+                    carry = 1;
+                }
+                if(sum == 3)
+                {
+                    res += "1";
+                    carry = 1;
+                }
+            }
+            if (carry == 1)
+            {
+                res += "1";
+            }
+            char[] array = res.ToCharArray();
+            Array.Reverse(array);
+            return new string(array);
+        }
     } 
 }
