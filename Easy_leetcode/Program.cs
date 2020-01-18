@@ -18,6 +18,13 @@ namespace Easy_leetcode
             double[] predicted = { 4, 25, 0.75, 11 };
             double[] observed = { 3, 21, -1.25, 13 };
             Console.WriteLine(LC.RootMeanSquarError(predicted, observed));
+            //LC.ZigZagConversation_6("PAHNAPLSIIGYIR", 4);
+            int[] arr = { 9 };
+            int [] test = LC.PlusOne_66(arr);
+            foreach (var item in test)
+            {
+                Console.Write(item + " ");
+            }
             Console.ReadLine();
         }
     }

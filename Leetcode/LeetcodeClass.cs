@@ -149,5 +149,51 @@ namespace Leetcode
             }
             return res;
         }
+        public string ZigZagConversation_6(string s, int numRows)
+        {
+            string res = "";
+            int num = 0;
+            for (int i = 0; i < numRows; i++)
+            {
+                foreach (var item in s)
+                {
+                    Console.Write(item);
+                }
+            }
+            return res;
+        }
+        public int[] PlusOne_66(int[] digits)
+        {
+            int tem = digits[digits.Length - 1];
+            digits[digits.Length - 1] += 1;
+            if(digits[digits.Length - 1] >= 10)
+            {
+                digits[digits.Length - 1] = tem;
+                int carry = 1;
+                for (int i = digits.Length-1; i >= 0; i--)
+                {
+                    digits[i] += carry;
+                    if (digits[i] > 9 && i != 0)
+                    {
+                        carry = 1;
+                        digits[i] = 0;
+                    }
+                    else carry = 0;
+                    
+                }
+                if(digits[0] > 9)
+                {
+                    int[] res = new int[digits.Length + 1];
+                    res[0] = 1;
+                    res[1] = digits[0] % 10;
+                    for (int i = 2; i < digits.Length + 1; i++)
+                    {
+                        res[i] = digits[i - 1];
+                    }
+                    return res;
+                }
+            }
+            return digits;
+        }
     } 
 }
