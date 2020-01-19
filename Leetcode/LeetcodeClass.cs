@@ -3,6 +3,12 @@ using System.Collections.Generic;
 
 namespace Leetcode
 {
+  public class ListNode {
+     public int val;
+      public ListNode next;
+      public ListNode(int x) { val = x; }
+  }
+
     public class LeetcodeClass
     {
         public int RemoveDuplicates_26(int[] nums) //passed
@@ -242,6 +248,26 @@ namespace Leetcode
             char[] array = res.ToCharArray();
             Array.Reverse(array);
             return new string(array);
+        }
+        public ListNode DeleteDuplicates_83(ListNode head)
+        {
+            if (head == null) return head;
+            ListNode runner = new ListNode(head.val);
+            ListNode res = runner;
+            int a = 0;
+            int b = 0;
+            while(head.next != null)
+            {
+                a = head.val;
+                head = head.next;
+                b = head.val;
+                if(b != a)
+                {
+                    runner.next = new ListNode(b);
+                    runner = runner.next;
+                }
+            }
+            return res;
         }
     } 
 }
