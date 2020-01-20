@@ -12,7 +12,8 @@ namespace Easy_leetcode
         static void Main(string[] args)
         {
             LeetcodeClass LC = new LeetcodeClass();
-            Console.WriteLine(LC.AddBinary("110", "1"));
+            //Console.WriteLine(LC.ClimbStairs_70(35));
+            Console.WriteLine(LC.LengthOfLastWord_58("day"));
           //  LC.ReadBinaryWatch_401(1);
             //Console.WriteLine(  LC.HapppyNumber_202(7));
             //Console.WriteLine(  LC.StrStr_28("mississippi", "issip"));

@@ -269,5 +269,43 @@ namespace Leetcode
             }
             return res;
         }
+        public int ClimbStairs_70(int n)
+        {
+            if (n == 1)
+            {
+                return 1;
+            }
+            int first = 1;
+            int second = 2;
+            for (int i = 3; i <= n; i++)
+            {
+                int third = first + second;
+                first = second;
+                second = third;
+            }
+            return second;
+        }
+        public int LengthOfLastWord_58(string s)
+        {
+            int count = 0;
+            if (s.Length == 0) return 0;
+            for (int i = s.Length - 1; i >= 0; i--)
+            {
+                if (s[i] != ' ')
+                {
+                    i--;
+                    count++;
+                    if (i <= 0) return count;
+                    while (i != 0)
+                    {
+                        if (s[i] != ' ') count++;
+                        else return count;
+                        i--;
+                    }
+                }
+            }
+            if (s[0] != ' ') count++;
+            return count;
+        }
     } 
 }
