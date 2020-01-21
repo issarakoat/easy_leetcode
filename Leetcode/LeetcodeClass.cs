@@ -8,8 +8,14 @@ namespace Leetcode
       public ListNode next;
       public ListNode(int x) { val = x; }
   }
-
-    public class LeetcodeClass
+  public class TreeNode
+    {
+      public int val;
+      public TreeNode left;
+      public TreeNode right;
+      public TreeNode(int x) { val = x; }
+ }
+     public class LeetcodeClass
     {
         public int RemoveDuplicates_26(int[] nums) //passed
         {
@@ -158,7 +164,6 @@ namespace Leetcode
         public string ZigZagConversation_6(string s, int numRows)
         {
             string res = "";
-            int num = 0;
             for (int i = 0; i < numRows; i++)
             {
                 foreach (var item in s)
@@ -316,6 +321,13 @@ namespace Leetcode
                 nums1[m + i] = nums2[i];
             }
             Array.Sort(nums1);
+        }
+        public bool IsSameTree_100(TreeNode p, TreeNode q)
+        {
+            if (p == null && q == null) return true;
+            if (p == null || q == null) return false;
+            if (p.val != q.val) return false;
+            return IsSameTree_100(p.left, q.left) && IsSameTree_100(p.right, q.right);
         }
     } 
 }
