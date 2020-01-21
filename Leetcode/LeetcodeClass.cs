@@ -269,6 +269,7 @@ namespace Leetcode
             }
             return res;
         }
+        //Fibonacci Number
         public int ClimbStairs_70(int n)
         {
             if (n == 1)
@@ -306,6 +307,15 @@ namespace Leetcode
             }
             if (s[0] != ' ') count++;
             return count;
+        }
+        //this one is so dumb
+        public void Merge_88(int[] nums1, int m, int[] nums2, int n)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                nums1[m + i] = nums2[i];
+            }
+            Array.Sort(nums1);
         }
     } 
 }
