@@ -329,5 +329,24 @@ namespace Leetcode
             if (p.val != q.val) return false;
             return IsSameTree_100(p.left, q.left) && IsSameTree_100(p.right, q.right);
         }
+        public bool IsSymmetric_101(TreeNode root)
+        {
+            Queue<TreeNode> q = new Queue<TreeNode>();
+            q.Enqueue(root);
+            q.Enqueue(root);
+            while (q.Count > 0)
+            {
+                TreeNode node = q.Dequeue();
+                TreeNode node1 = q.Dequeue();
+                if (node == null && node1 == null) continue;
+                if (node == null || node1 == null) return false;
+                if (node.val != node1.val) return false;
+                q.Enqueue(node.left);
+                q.Enqueue(node1.right);
+                q.Enqueue(node.right);
+                q.Enqueue(node1.left);
+            }
+            return true ;
+        }
     } 
 }

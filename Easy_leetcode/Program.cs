@@ -12,9 +12,16 @@ namespace Easy_leetcode
         static void Main(string[] args)
         {
             LeetcodeClass LC = new LeetcodeClass();
-            int[] a = {1, 2, 3, 0, 0, 0};
-            int[] b = { 2,5,6};
-            LC.Merge_88(a,6, b,3);
+            TreeNode a = new TreeNode(1);
+            a.left = new TreeNode(2);
+            a.right = new TreeNode(2);
+            a.left.left = new TreeNode(3);
+            a.left.right = new TreeNode(4);
+            a.right.left = new TreeNode(4);
+            a.right.right = new TreeNode(3);
+            LC.IsSymmetric_101(a);
+            Console.WriteLine(LC.IsSymmetric_101(a));
+            //need to do ZigZagConversation_6
             Console.ReadLine();
         }
     }
