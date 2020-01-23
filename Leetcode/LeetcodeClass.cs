@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Leetcode
 {
@@ -135,7 +136,7 @@ namespace Leetcode
             }
             return index;
         }
-        public int MaxSubArray(int[] nums)
+        public int MaxSubArray_53(int[] nums)
         {
             if (nums.Length == 1) return nums[0];
             int max_sum = int.MinValue;
@@ -150,6 +151,21 @@ namespace Leetcode
             }
             return max_sum;
         }
+        public int MaxSumOfTwoElements(int[] nums)
+        {
+            int maxNum = int.MinValue;
+            int maxSum = int.MinValue;
+            if (nums.Length == 1) return nums[0];
+            for (int i = 0; i < nums.Length - 1; i++)
+            {
+                if (maxNum != nums[i + 1])
+                {
+                    maxNum = Math.Max(maxNum, nums[i]);
+                    maxSum = Math.Max(maxSum, maxNum + nums[i + 1]);
+                }
+            }
+            return maxSum;
+        }
         public int MaxProfit_121(int[] prices)
         {
             int min = int.MaxValue;
@@ -161,6 +177,7 @@ namespace Leetcode
             }
             return res;
         }
+        //couldn't do this
         public string ZigZagConversation_6(string s, int numRows)
         {
             string res = "";
@@ -347,6 +364,76 @@ namespace Leetcode
                 q.Enqueue(node1.left);
             }
             return true ;
+        }
+        public int MaxDepth_104(TreeNode root)
+        {
+            if (root == null) return 0;
+            int count = 1;
+            int countLeft = MaxDepth_104(root.left);
+            int countRight = MaxDepth_104(root.right);
+            return countLeft > countRight ? count + countLeft : count + countRight;
+        }
+        public int MaxDepth_104_v2(TreeNode root)
+        {
+            if (root == null) return 0;
+            int count = 0;
+            Queue<TreeNode> q = new Queue<TreeNode>();
+            q.Enqueue(root);
+            q.Enqueue(null);
+            while (q.Count > 0)
+            {
+                TreeNode t = q.Dequeue();
+                if (t == null)
+                {
+                    count++;
+                    if (q.Count == 0) break;
+                    else
+                    {
+                        q.Enqueue(null); //separate the level by Enque
+                        continue;
+                    }
+                }
+                if (t.left != null) q.Enqueue(t.left);
+                if (t.right != null) q.Enqueue(t.right);
+            }
+            return count;
+        }
+        public int[] TwoSum_1(int[] nums, int target)
+        {
+            int[] res = new int[2];
+            for (int j = 0; j < nums.Length; j++)
+            {
+                for (int i = j + 1; i < nums.Length; i++)
+                {
+                    if (nums[i] + nums[j] == target)
+                    {
+                        res[0] = j;
+                        res[1] = i;
+                        return res;
+                    }
+                }
+            }
+
+            return res;
+        }
+            public int[] TwoSum_1_v2(int[] nums, int target)
+        {
+            int[] res = new int[2];
+            Dictionary<int, int> dic = new Dictionary<int, int>();
+            int index = 0;
+            for (int j = 0; j < nums.Length; j++)
+            {
+                dic.Add(j, nums[j]);
+                int complement = target - dic[j];
+                if (dic.ContainsValue(complement))
+                {
+                    int key = dic.FirstOrDefault(x => x.Value == complement).Key;
+                    if (key != j)
+                        return new int[] {key,j };
+                }
+                index++;
+            }
+            return null;
         }
     } 
 }
