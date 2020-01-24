@@ -4,33 +4,34 @@ using System.Linq;
 
 namespace Leetcode
 {
-  public class ListNode {
-     public int val;
-      public ListNode next;
-      public ListNode(int x) { val = x; }
-  }
-  public class TreeNode
+    public class ListNode
     {
-      public int val;
-      public TreeNode left;
-      public TreeNode right;
-      public TreeNode(int x) { val = x; }
- }
-     public class LeetcodeClass
+        public int val;
+        public ListNode next;
+        public ListNode(int x) { val = x; }
+    }
+    public class TreeNode
+    {
+        public int val;
+        public TreeNode left;
+        public TreeNode right;
+        public TreeNode(int x) { val = x; }
+    }
+    public class LeetcodeClass
     {
         public int RemoveDuplicates_26(int[] nums) //passed
         {
-            if(nums.Length == 0) { return 0; }
+            if (nums.Length == 0) { return 0; }
             int count = 0;
             for (int i = 0; i < nums.Length; i++)
             {
-                if(nums[count] != nums[i])
+                if (nums[count] != nums[i])
                 {
                     count++;
-                    nums[count] = nums[i];                
+                    nums[count] = nums[i];
                 }
             }
-            return count+1;
+            return count + 1;
         }
 
         public int RemoveElement_27(int[] nums, int val)//passed
@@ -52,12 +53,12 @@ namespace Leetcode
             int hour = num;
             int min = num;
             List<string> res = new List<string>();
-            if(num == 0)
+            if (num == 0)
             {
                 res.Add("0:00");
                 return res;
             }
-            for(int i = 1; i<=8; i *= 2)
+            for (int i = 1; i <= 8; i *= 2)
             {
                 Console.WriteLine(i);
 
@@ -79,7 +80,7 @@ namespace Leetcode
                 {
                     mod = tem % 10;
                     res += mod * mod;
-                    tem /= 10;                 
+                    tem /= 10;
                 }
                 if (checks.Contains(res)) return false;
                 checks.Add(res);
@@ -97,7 +98,7 @@ namespace Leetcode
         public int CountPrime_204(int n)
         {
             int count = 0;
-            for(int i = 2; i<n; i++)
+            for (int i = 2; i < n; i++)
             {
                 if (isPrime_204(i)) count++;
             }
@@ -123,7 +124,7 @@ namespace Leetcode
             {
                 me_o += o;
             }
-            double res = Math.Sqrt((me_p - me_o) * (me_p - me_o)/N);
+            double res = Math.Sqrt((me_p - me_o) * (me_p - me_o) / N);
             return res;
         }
         public int SearchInsertPosition_35(int[] nums, int target)
@@ -132,7 +133,7 @@ namespace Leetcode
             for (int i = 0; i < nums.Length; i++)
             {
                 if (target == nums[i]) return i;
-                if (target > nums[i]) index = i+1;
+                if (target > nums[i]) index = i + 1;
             }
             return index;
         }
@@ -194,11 +195,11 @@ namespace Leetcode
         {
             int tem = digits[digits.Length - 1];
             digits[digits.Length - 1] += 1;
-            if(digits[digits.Length - 1] >= 10)
+            if (digits[digits.Length - 1] >= 10)
             {
                 digits[digits.Length - 1] = tem;
                 int carry = 1;
-                for (int i = digits.Length-1; i >= 0; i--)
+                for (int i = digits.Length - 1; i >= 0; i--)
                 {
                     digits[i] += carry;
                     if (digits[i] > 9 && i != 0)
@@ -207,9 +208,9 @@ namespace Leetcode
                         digits[i] = 0;
                     }
                     else carry = 0;
-                    
+
                 }
-                if(digits[0] > 9)
+                if (digits[0] > 9)
                 {
                     int[] res = new int[digits.Length + 1];
                     res[0] = 1;
@@ -240,24 +241,24 @@ namespace Leetcode
             {
                 int x = 0;
                 int y = 0;
-                if(i < A.Length)
+                if (i < A.Length)
                 {
                     if (A[i] == '1') x = 1;
                 }
-                if(i < B.Length)
+                if (i < B.Length)
                 {
-                    if (B[i] == '1' ) y = 1;
+                    if (B[i] == '1') y = 1;
                 }
-                             
+
                 int sum = x + y + carry;
                 carry = 0;
                 if (sum <= 1) res += sum.ToString();
-                if(sum == 2)
+                if (sum == 2)
                 {
                     res += "0";
                     carry = 1;
                 }
-                if(sum == 3)
+                if (sum == 3)
                 {
                     res += "1";
                     carry = 1;
@@ -278,12 +279,12 @@ namespace Leetcode
             ListNode res = runner;
             int a = 0;
             int b = 0;
-            while(head.next != null)
+            while (head.next != null)
             {
                 a = head.val;
                 head = head.next;
                 b = head.val;
-                if(b != a)
+                if (b != a)
                 {
                     runner.next = new ListNode(b);
                     runner = runner.next;
@@ -363,7 +364,7 @@ namespace Leetcode
                 q.Enqueue(node.right);
                 q.Enqueue(node1.left);
             }
-            return true ;
+            return true;
         }
         public int MaxDepth_104(TreeNode root)
         {
@@ -416,7 +417,7 @@ namespace Leetcode
 
             return res;
         }
-            public int[] TwoSum_1_v2(int[] nums, int target)
+        public int[] TwoSum_1_v2(int[] nums, int target)
         {
             int[] res = new int[2];
             Dictionary<int, int> dic = new Dictionary<int, int>();
@@ -429,11 +430,35 @@ namespace Leetcode
                 {
                     int key = dic.FirstOrDefault(x => x.Value == complement).Key;
                     if (key != j)
-                        return new int[] {key,j };
+                        return new int[] { key, j };
                 }
                 index++;
             }
             return null;
         }
-    } 
+        public int[] TwoSum_1_v3(int[] nums, int target)
+        {
+            return null;
+        }
+        public int SingleNumber_136(int[] nums)
+        {
+            List<int> res = new List<int>();
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (!res.Contains(nums[i])) res.Add(nums[i]);
+                else res.Remove(nums[i]);
+            }
+            return res[0];
+        }
+        //Runtime: 88 ms, faster than 99.63% of C# online submissions for Single Number.
+        public int SingleNumber_136_v2(int[] nums)
+        {
+            int res = 0;
+            foreach (var item in nums)
+            {
+                res ^= item;
+            }
+            return res;
+        }
+    }
 }

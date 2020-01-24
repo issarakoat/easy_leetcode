@@ -27,7 +27,7 @@ namespace Easy_leetcode
             //Console.WriteLine(res);
 
             int[] arr = new int[] { 3,2,4 };
-            int[] res = LC.TwoSum(arr, 6);
+            int[] res = LC.TwoSum_1_v3(arr, 6);
             foreach (var item in res)
             {
                 Console.WriteLine(item);
