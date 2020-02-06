@@ -26,8 +26,13 @@ namespace Easy_leetcode
             //int res = LC.MaxSubArray_53(arr);
             //Console.WriteLine(res);
 
+<<<<<<< HEAD
             int[] arr = new int[] { 2, 11, 7, 15 };
             int[] res = LC.TwoSum_1_v3(arr, 9);
+=======
+            int[] arr = new int[] { 3,2,4 };
+            int[] res = LC.TwoSum_1_v3(arr, 6);
+>>>>>>> 5acbe1faefeca8a9f9f85618172b15cbd08a7391
             foreach (var item in res)
             {
                 Console.WriteLine(item);

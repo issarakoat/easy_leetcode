@@ -438,6 +438,7 @@ namespace Leetcode
         }
         public int[] TwoSum_1_v3(int[] nums, int target)
         {
+<<<<<<< HEAD
             Dictionary<int, int> dic = new Dictionary<int, int>();
             int compliment = 0;
             int index = 0;
@@ -477,6 +478,8 @@ namespace Leetcode
             {
                 if (item.Value == val) return new int[] { first, item.Key };
             }
+=======
+>>>>>>> 5acbe1faefeca8a9f9f85618172b15cbd08a7391
             return null;
         }
         public int SingleNumber_136(int[] nums)
